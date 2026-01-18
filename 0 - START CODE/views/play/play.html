@@ -16,25 +16,29 @@
         </div>
     </nav>
 
-    <div id="start" class="bg-white rounded-2xl p-5 text-5xl cursor-pointer shadow-lg hover:shadow-xl transition">
+    <div id="start" class="bg-white rounded-2xl p-5 text-5xl cursor-pointer shadow-lg hover:shadow-xl transition select-none">
         Start Quiz!
     </div>
 
     <div id="quiz" class="hidden bg-white rounded-2xl p-5 w-[800px] max-w-[80%] shadow-lg">
       <div id="question" class="flex justify-center items-center text-3xl mb-5 font-semibold text-center min-h-[100px]">
-        QQQQQQQQ
+        Question Loading...
       </div>
 
       <div id="choices" class="grid grid-cols-2 gap-4 justify-center items-center mt-5">
-        <div id="A" onclick="checkAnswer('A')" class="p-4 text-center border border-gray-400 rounded cursor-pointer hover:border-black hover:bg-gray-100 transition text-xl">AAAA</div>
-        <div id="B" onclick="checkAnswer('B')" class="p-4 text-center border border-gray-400 rounded cursor-pointer hover:border-black hover:bg-gray-100 transition text-xl">BBBB</div>
-        <div id="C" onclick="checkAnswer('C')" class="p-4 text-center border border-gray-400 rounded cursor-pointer hover:border-black hover:bg-gray-100 transition text-xl">CCCC</div>
-        <div id="D" onclick="checkAnswer('D')" class="p-4 text-center border border-gray-400 rounded cursor-pointer hover:border-black hover:bg-gray-100 transition text-xl">DD</div>
+        <button id="A" onclick="checkAnswer('A')" class="p-4 text-center border border-gray-400 rounded cursor-pointer hover:border-black hover:bg-gray-100 transition text-xl w-full">A</button>
+        <button id="B" onclick="checkAnswer('B')" class="p-4 text-center border border-gray-400 rounded cursor-pointer hover:border-black hover:bg-gray-100 transition text-xl w-full">B</button>
+        <button id="C" onclick="checkAnswer('C')" class="p-4 text-center border border-gray-400 rounded cursor-pointer hover:border-black hover:bg-gray-100 transition text-xl w-full">C</button>
+        <button id="D" onclick="checkAnswer('D')" class="p-4 text-center border border-gray-400 rounded cursor-pointer hover:border-black hover:bg-gray-100 transition text-xl w-full">D</button>
+      </div>
+      
+      <div class="w-full bg-gray-200 rounded-full h-2.5 mt-4">
+        <div id="progress" class="bg-purple-600 h-2.5 rounded-full" style="width: 0%"></div>
       </div>
     </div>
     
     <div id="scoreContainer" class="hidden flex-col justify-center items-center bg-white p-10 rounded-2xl shadow-lg text-center">
-        </div>
+    </div>
 
   </body>
 </html>

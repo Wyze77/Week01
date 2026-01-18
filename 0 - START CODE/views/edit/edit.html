@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="edit.js"></script>
+</head>
+<body class="bg-gray-100 font-sans min-h-screen">
+
+    <nav class="fixed top-0 w-full bg-gray-800 text-white p-4 flex justify-between items-center shadow-md z-10">
+        <div class="flex items-center gap-2 pl-4">
+            <img src="../../img/logo.png" class="w-8 h-8">
+            <h1 class="text-xl font-bold">Quiz Editor</h1>
+        </div>
+        <div class="pr-5 space-x-6">
+            <a href="../play/play.html" class="text-white hover:text-gray-300 no-underline">Play</a>
+            <a href="edit.html" class="text-purple-400 font-bold border-b-2 border-purple-400 no-underline">Edit</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto mt-24 p-5 max-w-3xl">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-3xl font-bold text-gray-800">Manage Questions</h2>
+            <button id="addBtn" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-lg shadow transition">
+                + Add Question
+            </button>
+        </div>
+
+        <div id="questionsList" class="space-y-4"></div>
+    </div>
+
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center z-50">
+        <div class="bg-white rounded-lg p-6 w-[500px] shadow-2xl transform transition-all">
+            <h2 class="text-2xl font-bold mb-4 text-purple-700" id="modalTitle">Create Question</h2>
+            
+            <div class="space-y-3">
+                <input id="inputTitle" type="text" placeholder="Question Title" class="w-full p-2 border rounded focus:border-purple-500 outline-none">
+                
+                <div class="grid grid-cols-1 gap-2">
+                    <input id="inputA" type="text" placeholder="Answer A" class="p-2 border rounded w-full">
+                    <input id="inputB" type="text" placeholder="Answer B" class="p-2 border rounded w-full">
+                    <input id="inputC" type="text" placeholder="Answer C" class="p-2 border rounded w-full">
+                    <input id="inputD" type="text" placeholder="Answer D" class="p-2 border rounded w-full">
+                </div>
+
+                <div class="flex items-center gap-2 mt-2 bg-gray-100 p-2 rounded">
+                    <label class="font-bold text-gray-700">Correct Answer:</label>
+                    <select id="inputCorrect" class="p-1 border rounded bg-white flex-grow">
+                        <option value="A">Answer A</option>
+                        <option value="B">Answer B</option>
+                        <option value="C">Answer C</option>
+                        <option value="D">Answer D</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="flex justify-end gap-3 mt-6">
+                <button id="cancelBtn" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded border">Cancel</button>
+                <button id="saveBtn" class="px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700">Save</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
