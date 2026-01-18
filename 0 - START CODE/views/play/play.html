@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Play Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="play.js"></script>
+  </head>
+  <body class="bg-[#bb80ff] font-sans h-screen w-screen flex justify-center items-center m-0 p-0 box-border">
+    
+    <nav class="fixed top-0 w-full bg-gray-700 text-white p-4 flex justify-between items-center shadow-md z-50">
+        <h1 class="text-2xl pl-5 m-0 font-bold">Quiz App</h1>
+        <div class="pr-5">
+            <a href="play.html" class="text-purple-300 font-bold border-b-2 border-purple-300 ml-5 text-xl no-underline">Play quiz</a>
+            <a href="../edit/edit.html" class="text-white hover:text-gray-300 ml-5 text-xl no-underline">Edit quiz</a>
+        </div>
+    </nav>
+
+    <div id="start" class="bg-white rounded-2xl p-5 text-5xl cursor-pointer shadow-lg hover:shadow-xl transition">
+        Start Quiz!
+    </div>
+
+    <div id="quiz" class="hidden bg-white rounded-2xl p-5 w-[800px] max-w-[80%] shadow-lg">
+      <div id="question" class="flex justify-center items-center text-3xl mb-5 font-semibold text-center min-h-[100px]">
+        QQQQQQQQ
+      </div>
+
+      <div id="choices" class="grid grid-cols-2 gap-4 justify-center items-center mt-5">
+        <div id="A" onclick="checkAnswer('A')" class="p-4 text-center border border-gray-400 rounded cursor-pointer hover:border-black hover:bg-gray-100 transition text-xl">AAAA</div>
+        <div id="B" onclick="checkAnswer('B')" class="p-4 text-center border border-gray-400 rounded cursor-pointer hover:border-black hover:bg-gray-100 transition text-xl">BBBB</div>
+        <div id="C" onclick="checkAnswer('C')" class="p-4 text-center border border-gray-400 rounded cursor-pointer hover:border-black hover:bg-gray-100 transition text-xl">CCCC</div>
+        <div id="D" onclick="checkAnswer('D')" class="p-4 text-center border border-gray-400 rounded cursor-pointer hover:border-black hover:bg-gray-100 transition text-xl">DD</div>
+      </div>
+    </div>
+    
+    <div id="scoreContainer" class="hidden flex-col justify-center items-center bg-white p-10 rounded-2xl shadow-lg text-center">
+        </div>
+
+  </body>
+</html>
